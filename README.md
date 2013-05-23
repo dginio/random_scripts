@@ -1,4 +1,5 @@
 --- voice.py :
+
 	Lit le texte envoyé
 	lib à installer : pyglet ( pour lire le fichier mp3 )
 	utilise google translate comme TextToSpeech
@@ -6,5 +7,13 @@
 	example d'utilisation :
 		./voice.py "Salut patate"
 --- wireshark.py :
+
 	Fait planter wireshark
 	Plus d'information ici : http://0xdeadbeef.us/archive/Wireshark-exploit-from-Defcon-20-CTF
+
+--- conkygen.py :
+
+	Génère un conky dynamique
+	Informations sur la machine
+	Informations sur le réseau, configuration de l'interface, machines actives
+	lib utilisé : scapy ( execution root necessaire )
