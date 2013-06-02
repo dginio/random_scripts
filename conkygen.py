@@ -3,7 +3,7 @@
 
 # --- Dginio --- 
 
-# You need screen, scapy
+# You need screen, scapy, conky
 # The conkyrc file is written for a screen resolution of 1600*900
 
 # conkyrc generator, dynamic network informations
@@ -65,14 +65,14 @@ if int(execute("ps aux | grep '"+current_filename+"' | grep -v 'grep' | wc -l").
 		gw = [e[2] for e in conf.route.routes if e[2]!='0.0.0.0'][0]
 		connect = 1
 		# If we were not connected we need te rewrite the conkyrc file
-		if "Not Connected" in netinfo_content:
+		if "Not connected" in netinfo_content :
 			write = 1
 	except :
-		# The gateway can't be found, we are not connected
 		gw = ""
+		# The gateway can't be found, we are not connected
 		connect = 0
 		# If we were connected we need to rewrite the conkyrc file
-		if not "Not Connected" in netinfo_content :
+		if not "Not connected" in netinfo_content :
 			write = 1
 
 	open_netinfo.close()
